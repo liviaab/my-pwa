@@ -1,0 +1,12 @@
+.card-image-container {
+  width: 33%;
+  border: 1px solid gray;
+}
+
+img {
+  width: 100%;
+}
+.description {
+  overflow-wrap: break-word;
+  text-align: center;
+}

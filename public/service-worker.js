@@ -14,10 +14,10 @@ self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(function (cache) {
-        return cache.addAll(urlsToCache)
+        return cache.addAll(urlsToCache);
       })
   )
-})
+});
 
 
 // Elimina caches antigos que não sejam os atuais.
@@ -28,11 +28,11 @@ self.addEventListener('activate', event => {
     caches.keys().then(keyList =>
       Promise.all(keyList.map(key => {
         if (!cacheWhitelist.includes(key)) {
-          return caches.delete(key)
+          return caches.delete(key);
         }
       }))
     )
-  )
+  );
 })
 
 // Quando a página da Web vai buscar arquivos, nós interceptamos esse pedido e
