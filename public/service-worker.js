@@ -38,6 +38,7 @@ self.addEventListener('activate', event => {
 // Quando a página da Web vai buscar arquivos, nós interceptamos esse pedido e
 // servimos os arquivos correspondentes se tivemos
 self.addEventListener('fetch', function (event) {
+  console.log('Intercepting fetch.');
   event.respondWith(
     caches.match(event.request).then(response => {
       if(response) {
@@ -61,6 +62,7 @@ self.addEventListener('fetch', function (event) {
 
           caches.open(CACHE_NAME)
             .then(function(cache) {
+              console.log('Updating cache entry');
               cache.put(event.request, responseToCache);
             });
 
