@@ -1,10 +1,14 @@
 .card-image-container {
   width: 33%;
   border: 1px solid gray;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 10px;
 }
 
 img {
-  width: 100%;
+  max-width: 400px;
 }
 .description {
   overflow-wrap: break-word;
