@@ -1,12 +1,13 @@
+console.log("Hello from custom service worker!")
 // From https://blog.taller.net.br/pwa-com-react/
 // You have to update your cache version/cache name when you update the service-worker.js
 const CACHE_NAME = 'pwa-cache-v1'
 
 const urlsToCache = [
   "/",
+  "static/media/loading.26ef8bb4.gif",
+  "static/media/sad-face.a18c41a4.png",
   "static/js/bundle.js", //bundle created by webpack
-  'https://fonts.googleapis.com/css?family=Roboto&display=swap', //used in /public/index.html
-  'https://dog.ceo/api/breeds/image/random' // endpoint da API que estamos consumindo, sem esse link a PWA não vai funcionar corretamente offline
 ]
 
 // A primeira vez que o usuário inicia a PWA, 'install' é acionado.
@@ -36,7 +37,7 @@ self.addEventListener('activate', event => {
 })
 
 // Quando a página da Web vai buscar arquivos, nós interceptamos esse pedido e
-// servimos os arquivos correspondentes se tivemos
+// // servimos os arquivos correspondentes se tivemos
 self.addEventListener('fetch', function (event) {
   console.log('Intercepting fetch.');
   event.respondWith(
