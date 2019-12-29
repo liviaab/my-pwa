@@ -4,23 +4,14 @@ This is my first application to understand how a PWA is configured and how it wo
 
 The page [Making a Progressive Web App](https://create-react-app.dev/docs/making-a-progressive-web-app/) has some important 'Offline-First Considerations'
 
+This app is also available on Heroku:
+
+https://blooming-island-50658.herokuapp.com/
+
+
 ## Available Scripts
 
 In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-** BUT as it is a PWA, it will only work in production mode **
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `yarn build`
 
@@ -29,5 +20,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
-
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+_This is what you must do if you want to test the application locally. This is a PWA so it will only work in production mode._
+
